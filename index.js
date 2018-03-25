@@ -14,13 +14,13 @@ class Meal{
   }
 
 deliveries(){
-  return store.deliveries.filter(delivery =>{
+  return store.deliveries.filter(delivery => {
     return delivery.mealId == this.id;
   });
 }
 
 customers(){
-  return store.deliveries().map(delivery=>{
+  return this.deliveries().map(delivery=>{
     return delivery.customer();
   });
 }
@@ -49,14 +49,14 @@ totalSpent(){
 }
 
 deliveries(){
-  return store.deliveries().filter(delivery=>{
+  return store.deliveries.filter(delivery=>{
     return delivery.customerId == this.id;
   });
 }
 
 meals(){
-  return store.deliveries().map(delivery =>{
-    return delivery.customerId == this.id;
+  return this.deliveries().map(delivery =>{
+    return delivery.meal();
   });
 }
 
