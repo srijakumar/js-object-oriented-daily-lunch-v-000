@@ -85,7 +85,7 @@ customer(){
 
 }
 
-/*class Employer{
+class Employer{
   constructor(name){
     this.name = name;
     this.id = ++employerId;
@@ -93,7 +93,7 @@ customer(){
   }
 
 employees(){
-  return.store.customers.filter(customer=>{
+  return store.customers.filter(customer=>{
     return customer.employerId == this.id;
   });
 }
@@ -115,4 +115,4 @@ meals(){
 
 }
 
-}*/
+}
